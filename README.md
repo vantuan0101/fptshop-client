@@ -13,7 +13,8 @@ List of function website that I do :
 + Order Product and send Mail when you order successfully
 
 + login , logout and register you will receive confirm email.
-
+Source Code : [FPTShop-client](https://github.com/vantuan0101/fptshop-client)
+Demo : [FPTShop-client](https://fptshop-client.vercel.app/)
 
 ## Server : 
 
@@ -28,3 +29,4 @@ List of function website that I do :
 + Order Product and send Mail when you order successfully
 
 + login , logout and register you will receive confirm email.
+Source Code : [FPTShop-server](https://github.com/vantuan0101/fptshop-server)
