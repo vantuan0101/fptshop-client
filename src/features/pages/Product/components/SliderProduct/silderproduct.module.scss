@@ -1,0 +1,24 @@
+@import "./../../../../../assets/scss/import";
+
+.banner {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 3px 0 #dee2e6;
+}
+
+.banner_item {
+  height: 150px;
+  @include md-tablet-desktop {
+    height: 300px;
+  }
+  & > img {
+    object-fit: fill;
+    @include md-tablet-desktop {
+      object-fit: cover;
+    }
+  }
+}

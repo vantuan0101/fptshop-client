@@ -1,0 +1,38 @@
+@import './../../../../../assets/scss/import';
+
+
+.main {
+    & > h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      color: #212529;
+      margin-bottom: 21px;
+    }
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .items {
+    margin-bottom: 14px;
+    margin-left: 10px;
+    @include md-tablet-desktop{
+      width: calc(100% / 2);
+margin-left: 0;
+    }
+
+    & input {
+      accent-color: $bg-red;
+      margin-right: 10px;
+    }
+    & label {
+      line-height: 18px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #4d4d4d;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+  

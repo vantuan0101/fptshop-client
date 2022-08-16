@@ -1,0 +1,66 @@
+@import "./../../../../assets/scss/import";
+.fTopWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px 0;
+  }
+.fMLogo {
+  display: flex;
+  align-items: center;
+  color: $text-white;
+  font-size: 25px;
+
+  & > .fMBar {
+    cursor: pointer;
+    @include md-tablet-desktop {
+      display: none;
+    }
+  }
+}
+
+.fLogo {
+  width: 87px;
+  height: 30px;
+  & > i {
+    width: 100%;
+    height: 100%;
+    background-position: 5px 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url("./../../../../assets/image/Mobile/icon.svg");
+    cursor: pointer;
+
+  }
+}
+.fMMenu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include md-tablet-desktop {
+    display: none;
+  }
+  & > a {
+    color: $text-white;
+    & span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.4px;
+      color: $text-white;
+    }
+    & strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: $text-white;
+      line-height: 1;
+    }
+  }
+  & > .hotline {
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+}

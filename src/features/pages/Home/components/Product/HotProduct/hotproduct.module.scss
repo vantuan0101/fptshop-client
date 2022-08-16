@@ -1,0 +1,121 @@
+@import "./../../../../../../assets/scss/import";
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: rgb(17 17 26 / 10%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 8px 24px,
+    rgb(17 17 26 / 10%) 0px 16px 48px;
+  @include md-tablet-desktop {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 0;
+  align-items: center;
+  & div {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  & a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0.9;
+  }
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items {
+  padding: 12px;
+  width: calc(100% / 2);
+  @include md-tablet-desktop {
+    width: calc(100% / 4);
+  }
+  .item_top {
+    & .image {
+      margin-bottom: 16px;
+      @include mobile {
+        height: 250px;
+      }
+      & > img {
+        border-radius: 10px;
+        @include mobile {
+          object-fit: fill;
+        }
+      }
+    }
+    & .name {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: normal;
+      color: #474c51;
+      margin-bottom: 10px;
+    }
+    & .cost {
+      & div:first-child {
+        width: 100px;
+        height: 22px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 6px;
+        background-color: #ef8573;
+        text-align: center;
+        overflow: hidden;
+        color: #fff;
+        border-radius: 15px;
+        position: relative;
+        z-index: 1;
+        @include md-tablet-desktop {
+          width: 130px;
+          height: 28px;
+          border-radius: 15px;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 500;
+        }
+        & .progress_bar {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          bottom: 0;
+          background-color: #cb1c22;
+          border-radius: 0px;
+        }
+      }
+      & div:last-child {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: normal;
+        color: #a7a7b1;
+        text-decoration: line-through;
+      }
+    }
+    
+  }
+}
+.item_bot {
+  & div {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.31;
+    color: #555;
+  }
+  & .payment {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.31;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,87 @@
+@import "./../../assets/scss/import";
+
+.main {
+  width: 100%;
+  background-color: $bg-white;
+}
+.contain {
+  width: 100%;
+  max-width: 1200px;
+  margin: 5px auto;
+  padding: 20px 15px;
+  @include md-tablet-desktop {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+.policy {
+  display: flex;
+  &_items {
+    padding-right: 20px;
+    & > li {
+      margin-bottom: 10px;
+      & > a {
+        font-size: 14px;
+        color: #3399d2;
+        @include mobile{
+            display: block;
+            padding: 0 0 0 10px;
+            font-size: 13px;
+            line-height: 2;
+            letter-spacing: normal;
+            text-align: left;
+        }
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  &_phone {
+    & > li {
+      margin-bottom: 10px;
+      & > p {
+        font-size: 15px;
+        font-weight: 700;
+        color: #4a4a4a;
+      }
+      & > a {
+        font-size: 20px;
+        font-weight: 700;
+        color: #d0021b;
+      }
+      & > span {
+        color: #4a4a4a;
+      }
+    }
+  }
+  & .more {
+    padding-left: 40px;
+    &_item {
+      & > li {
+        margin-bottom: 10px;
+        & > p {
+          font-size: 15px;
+          font-weight: 700;
+          color: #4a4a4a;
+        }
+        & > div {
+          font-size: 45px;
+          & > svg {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fs_ftbott {
+  background: #f2f2f2;
+  font-size: 10px;
+  color: #6d6d6d;
+  text-align: center;
+  padding: 10px 2px;
+  clear: both;
+}

@@ -1,0 +1,82 @@
+@import "../../../../assets/scss/import";
+.fsResult {
+  width: 523px;
+  min-width: 100%;
+  padding: 10px 15px;
+  margin-top: -20px;
+  margin-left: -112px;
+}
+.fsrHeading {
+  font-size: 14px;
+  font-weight: bold;
+  color: $text-black;
+  margin-bottom: 10px;
+}
+.fsrProduct {
+  font-size: 14px;
+  color: $text-black;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.fSearch {
+  //   display: none;
+  z-index: 5;
+  padding: 10px 0;
+  & > form {
+    display: flex;
+
+    position: relative;
+    @include md-tablet-desktop {
+      width: 496px;
+    }
+    & > label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    & > input {
+      // height: 100%;
+      // width: 90%;
+      outline: none;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      width: 100%;
+      height: 38px;
+      border: none;
+      font-size: 14px;
+      padding: 0 0 0 16px;
+      background: $bg-op-white;
+    }
+    & > span {
+      position: absolute;
+      z-index: 1;
+      color: #a2a2a2;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      margin-right: 68px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    & > button {
+      width: 60px;
+      outline: 0;
+      border: none;
+      box-shadow: none;
+      background: #333;
+      text-align: center;
+      color: $text-white;
+      text-transform: uppercase;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}

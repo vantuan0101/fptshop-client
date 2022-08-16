@@ -1,0 +1,150 @@
+@import "./../../assets/scss/import";
+.model {
+  overflow: hidden;
+  z-index: 997;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  // margin: auto;
+  position: fixed;
+  top: 0;
+  // left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  display: block;
+  @include md-tablet-desktop {
+    display: none;
+  }
+}
+
+.fTop {
+  background: $bg-red;
+
+  //   max-width: 1200px;
+  width: 100%;
+  padding: 0 $pd-desktop;
+  @include md-tablet-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+}
+
+.fBottom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  z-index: 10;
+  background: $bg-op-white;
+  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  @include md-tablet-desktop {
+    padding: 0 $pd-desktop;
+    background: $bg-red;
+    // height: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 36px;
+    background: $bg-black;
+    width: 100%;
+    left: 0 !important;
+    overflow-y: unset;
+  }
+}
+
+.fMenuBar {
+  display: flex;
+  align-items: center;
+  padding: $pd-mobile;
+  justify-content: space-between;
+  background: $bg-red;
+  height: 66px;
+  @include md-tablet-desktop {
+    height: 52px;
+    display: none;
+  }
+
+  .fLogoMenu {
+    width: 90px;
+    height: 40px;
+    & > i {
+      cursor: pointer;
+
+      width: 100%;
+      height: 100%;
+      background-position: 5px 6px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url("./../../assets/image/Mobile/icon.svg");
+    }
+  }
+  & > div {
+    cursor: pointer;
+    color: $text-white;
+    font-size: 33px;
+  }
+}
+.fOpenLogin {
+  background: $bg-op-white;
+  height: 48px;
+  padding: $pd-mobile;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  & > svg {
+    font-size: 30px;
+  }
+  & > span {
+    color: $text-black;
+    margin-left: 5px;
+    font-weight: 700;
+  }
+  @include md-tablet-desktop {
+    display: none;
+  }
+  &::after {
+    content: "";
+    display: table;
+    margin-bottom: 10px;
+  }
+  & > a {
+    color: $text-black;
+    display: flex;
+    align-items: center;
+    padding: $pd-mobile;
+    
+    & > i {
+      background-position: -25px -72px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url("./../../assets/image/Mobile/icon.svg");
+      width: 24px;
+      height: 24px;
+      background: $bg-gray;
+      font-size: 15px;
+      color: $text-white;
+      border-radius: 50%;
+    }
+    & > span {
+      color: $text-black;
+      margin-left: 5px;
+      font-weight: 700;
+    }
+  }
+}
+.fOpenLogout {
+  display: block;
+  @include md-tablet-desktop {
+    display: none;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./../../../../assets/scss/import";
+.fInfo {
+  display: none;
+  //   display: flex;
+  color: $text-white;
+  position: relative;
+  @include md-tablet-desktop {
+    display: flex;
+  }
+  & > a {
+    text-align: center;
+    padding-left: 10px;
+    color: $text-white;
+    display: block;
+    &:nth-child(3) {
+      &::after {
+        content: "";
+        width: 58px;
+        height: 27px;
+        position: absolute;
+        bottom: -15px;
+        right: 0;
+        left: 67%;
+        // background-color: yellow;
+        z-index: 9999;
+      }
+      &:hover ~ .fLogout {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    & > span {
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      color: $text-white;
+      margin-top: 4px;
+    }
+  }
+}
+.fLogout {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include md-tablet-desktop {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    margin-top: 49px;
+    width: 400px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    &:hover {
+      display: block;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

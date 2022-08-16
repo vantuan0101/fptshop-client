@@ -1,0 +1,93 @@
+@import "./../../../../../assets/scss/import";
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000080;
+  opacity: 0;
+  visibility: hidden;
+}
+.main {
+  position: relative;
+}
+.addmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 40px);
+  margin: auto;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.add {
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: green;
+  color: $text-white;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.heading {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: gray;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 50px;
+  line-height: 50px;
+}
+.user {
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 10px 0;
+  text-align: center;
+  align-items: center;
+  & > div {
+    overflow-x: scroll;
+  }
+}
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > div {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 9px;
+    overflow-x: hidden;
+  }
+  & > .edit {
+    background-color: greenyellow;
+  }
+  & > .delete {
+    background-color: red;
+  }
+}
+
+.isShow {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}

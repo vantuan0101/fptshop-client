@@ -1,0 +1,32 @@
+@import './../../../../../assets/scss/import';
+
+// rigth
+.product {
+    flex: 1;
+    & .result_fil,
+    .product_list {
+      box-shadow: 0 0 3px 0 #dee2e6;
+      border-radius: 6px;
+      background-color: $bg-white;
+    }
+  }
+  .result_fil {
+    margin-bottom: 30px;
+    height: 132px;
+  
+    & > h3 {
+      height: 50%;
+      padding: 15px;
+      font-size: 28px;
+      line-height: 28px;
+      color: #212529;
+      margin-bottom: 0;
+    }
+    & > div {
+      height: 50%;
+    }
+  }
+  // list product
+  .product_list {
+  }
+  

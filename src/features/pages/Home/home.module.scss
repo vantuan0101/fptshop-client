@@ -1,0 +1,26 @@
+@import "./../../../assets/scss/import";
+
+.home {
+  background-image: url("./../../../assets/image/desk-header-bg.webp");
+  background-repeat: no-repeat;
+  @include mobile {
+    background-color: $bg-op-white;
+    background-image: none;
+  }
+  &_qc {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    height: 150px;
+    & > img {
+      object-fit: fill;
+    }
+    @include md-tablet-desktop {
+      height: 100%;
+      & > img {
+        object-fit: cover;
+      }
+    }
+  }
+}

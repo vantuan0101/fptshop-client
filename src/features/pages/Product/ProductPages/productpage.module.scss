@@ -1,0 +1,39 @@
+@import "./../../../../assets/scss/import";
+
+.main {
+  padding-top: 20px;
+  background-color: $bg-op-white;
+  margin-bottom: 50px;
+
+  @include md-tablet-desktop{
+    margin-bottom: 20px;
+
+  }
+}
+
+.path{
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  & a {
+    font-size: 12.4px;
+    font-weight: 400;
+    line-height: 1;
+    color: #4a4a4a;
+    margin-right: 5px;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  // padding: 0 20px;
+  @include md-tablet-desktop{
+    display: flex;
+
+  }
+}
+.active {
+  color: #cd1818!important;
+  text-decoration: underline;
+}

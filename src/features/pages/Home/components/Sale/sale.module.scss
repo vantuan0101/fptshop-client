@@ -1,0 +1,129 @@
+@import "./../../../../../assets/scss/import";
+.sale {
+  // padding : 5px;
+  
+  @include mobile {
+    background-color: $bg-red;
+    box-shadow: 1px 13px 0 20px rgb(205 24 24);
+    
+  }
+
+}
+
+.saleCount {
+  width: 100%;
+  padding-top: 20px;
+  height: 100%;
+ 
+
+  & > a {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.fsale {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &_wrap {
+    display: flex;
+    justify-content: center;
+
+    @include md-tablet-desktop {
+      padding: 5px;
+      background-color: $bg-op-white;
+      border-radius: 10px;
+    }
+  }
+  &_left {
+    width: 800px;
+    margin-right: 5px;
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      padding-bottom: 25px;
+    }
+    & ul {
+      @include mobile {
+        display: none;
+      }
+      display: flex;
+      & > li {
+        padding: 9px 10px 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        cursor: pointer;
+        letter-spacing: normal;
+        height: 55px;
+      }
+    }
+  }
+  &_right {
+    @include mobile-md-tablet {
+      display: none;
+    }
+  }
+  .fsale_item {
+    margin-bottom: 5px;
+    & > img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .fsale_voucher {
+    padding: 9px 5px;
+    & > div {
+      display: flex;
+    }
+    .fsale_heading {
+      justify-content: space-between;
+      margin-bottom: 15px;
+      & > p {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-gray;
+        line-height: 1;
+      }
+      & > button {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .fsale_gift {
+      margin-bottom: 10px;
+      & > div {
+        border-radius: 6px;
+        display: inline-flex;
+        border: 1px solid #dee2e6;
+        margin-right: 10px;
+        padding: 2px;
+        width: 78px;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & > p {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1f1f1f;
+        display: block;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.3;
+        padding: 4px 0 4px;
+      }
+    }
+  }
+}

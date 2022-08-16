@@ -1,0 +1,31 @@
+@import './../../../assets/scss/import';
+
+.form {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    width: 100%;
+    & label {
+      margin: 15px 0;
+    }
+  }
+
+  .name {
+    display: flex;
+    justify-content: space-between;
+  }
+  .input {
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: $text-white;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin: 6px 0;
+  }
+  

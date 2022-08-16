@@ -1,0 +1,10 @@
+@import "./../../../../../assets/scss/import";
+
+// left
+.filter {
+  // background-color: bisque;
+  @include md-tablet-desktop {
+    width: 300px;
+    padding-right: 30px;
+  }
+}

@@ -1,0 +1,17 @@
+@import './../../../../../../assets/scss/import';
+.slider{
+    // width: 800px;
+    // display: flex;
+    @include mobile {
+        width: 100%;
+    }
+}
+.sliderItem{
+    // width: 800px;
+    @include mobile {
+        width: 100%;
+    }
+    & > img {
+        object-fit: cover;
+    }
+}

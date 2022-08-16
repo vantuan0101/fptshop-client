@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-prev {
+  left: 0px !important;
+  z-index: 1 !important;
+}
+.slick-next {
+  right: 29px !important;
+  z-index: 1 !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 50px !important;
+}
+.slick-dots {
+  bottom: 0 !important;
+  transform: translateY(100%) !important;
+}
+
+.css-b62m3t-container {
+  margin: 10px 0;
+}
+.css-319lph-ValueContainer {
+  height: 60px;
+}

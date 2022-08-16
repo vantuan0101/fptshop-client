@@ -1,0 +1,6 @@
+@import "./../../../../assets/scss/import";
+.logout {
+  @include md-tablet-desktop {
+    display: none;
+  }
+}

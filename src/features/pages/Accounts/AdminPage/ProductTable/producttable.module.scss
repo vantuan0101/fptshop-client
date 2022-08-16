@@ -1,0 +1,88 @@
+@import "./../../../../../assets/scss/import";
+.add {
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: green;
+  color: $text-white;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+// .main {
+// }
+.common {
+  display: grid;
+  align-items: center;
+  // justify-items: center;
+  column-gap: 0.6rem;
+  // grid-template-columns: repeat(6, minmax(100px ,1fr));
+
+  grid-template-columns: 100px 1fr 150px 150px 150px 150px;
+
+  border: 1px solid gray;
+}
+.name {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: gray;
+  height: 4.5rem;
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  & > li {
+    padding: 10px 15px;
+  }
+}
+.list {
+  &_items {
+    & > li {
+      padding: 10px 15px;
+      overflow-wrap: break-word;
+    }
+  }
+  &_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    & > div {
+      width: 40px;
+      height: 40px;
+      // margin: 0 10px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      border-radius: 9px;
+      overflow-x: hidden;
+    }
+    & > .edit {
+      background-color: greenyellow;
+    }
+    & > .delete {
+      background-color: red;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000080;
+  opacity: 0;
+  visibility: hidden;
+}
+.isShow {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+

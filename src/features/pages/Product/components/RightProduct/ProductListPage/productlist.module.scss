@@ -1,0 +1,111 @@
+@import "./../../../../../../assets/scss/import";
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  width: calc(100% / 2);
+  @include md-tablet-desktop {
+    width: calc(100% / 3);
+  }
+  &_contain {
+    display: block;
+    padding: 12px;
+  }
+  &_image {
+    height: 214px;
+    margin-bottom: 16px;
+    & > img {
+      border-radius: 6px;
+      object-fit: contain;
+      @include md-tablet-desktop {
+        object-fit: cover;
+      }
+    }
+  }
+  &_name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    color: #474c51;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    @include md-tablet-desktop {
+      font-size: 17px;
+    }
+  }
+  &_options {
+    display: flex;
+    margin-bottom: 10px;
+    & > div {
+      padding: 8px 6px;
+      border-radius: 6px;
+      background-color: #e9ecef;
+    }
+    & strong {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      color: #555;
+      text-align: center;
+    }
+  }
+  &_price {
+    margin-bottom: 10px;
+
+    @include md-tablet-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+    & div:first-child {
+      width: 100px;
+      height: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 6px;
+      background-color: #ef8573;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+      border-radius: 15px;
+      position: relative;
+      z-index: 1;
+      @include md-tablet-desktop {
+        width: 130px;
+        height: 28px;
+        border-radius: 15px;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+      & .progress_bar {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        background-color: #cb1c22;
+        border-radius: 0px;
+      }
+    }
+    & div:last-child {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: normal;
+      color: #a7a7b1;
+      text-decoration: line-through;
+    }
+  }
+  &_payment {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.31;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
