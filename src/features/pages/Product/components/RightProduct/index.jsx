@@ -4,7 +4,7 @@ import style from "./products.module.scss";
 import SortProducts from "./SortProduct";
 import ProductListPage from "./ProductListPage";
 const RightProduct = ({ nameProduct, pathName, productList, handleSort }) => {
-  console.log(productList);
+  // console.log(productList);
   return (
     <div className={clsx(style.product)}>
       <div className={clsx(style.result_fil)}>

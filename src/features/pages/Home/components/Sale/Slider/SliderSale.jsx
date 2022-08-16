@@ -10,7 +10,7 @@ import slider4 from "./../../../../../../assets/image/sale/slider4.webp";
 import style from "./sliderSale.module.scss";
 const SliderSale = () => {
   return (
-    <SliderField className={clsx(style.slider)}>
+    <SliderField className={clsx(style.slider)} slidesToShow={1}>
       <div className={clsx(style.sliderItem)}>
         <img src={slider1} alt="slider 1" />
       </div>

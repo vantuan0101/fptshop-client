@@ -4,12 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SliderField = ({
-  children,
-  className,
-  dots = false,
-  slidesToShow = 1,
-}) => {
+const SliderField = ({ children, className, dots = false, slidesToShow }) => {
   const settings = {
     dots,
     lazyLoad: true,
@@ -18,18 +13,35 @@ const SliderField = ({
     cssEase: "linear",
     infinite: true,
     speed: 500,
-    slidesToShow,
-    slidesToScroll: slidesToShow,
+    slidesToShow: slidesToShow || 4,
+    slidesToScroll: slidesToShow || 4,
     arrows: true,
 
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: slidesToShow || 3,
+          slidesToScroll: slidesToShow || 3,
+          infinite: true,
+          dots,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: slidesToShow || 2,
+          slidesToScroll: slidesToShow || 2,
+          initialSlide: slidesToShow || 2,
+        },
+      },
       {
         breakpoint: 480,
         settings: {
           arrows: false,
           dots,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: slidesToShow || 1,
+          slidesToScroll: slidesToShow || 1,
         },
       },
     ],

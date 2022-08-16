@@ -10,7 +10,7 @@ import style from "./silderproduct.module.scss";
 const SilderProduct = () => {
   return (
     <div className={clsx(style.banner)}>
-      <SliderField>
+      <SliderField slidesToShow={1}>
         <div className={clsx(style.banner_item)}>
           <img src={item1} alt="item1" />
         </div>

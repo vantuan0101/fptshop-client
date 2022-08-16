@@ -16,10 +16,14 @@ const HotSale = () => {
   return (
     <div className={clsx(style.contain)}>
       <div className={clsx(style.heading)}>Khuyến mãi Hot</div>
-      <SliderField className={style.HotSale} slidesToShow={4}>
+      <SliderField className={style.HotSale}>
         {productHotSale?.map((product, index) => {
           return (
-            <Link to={`/${product.typeProduct}/${product.id}`} className={clsx(style.sliderItem)} key={index}>
+            <Link
+              to={`/${product.typeProduct}/${product.id}`}
+              className={clsx(style.sliderItem)}
+              key={index}
+            >
               <div className={clsx(style.sliderWrap)}>
                 <div className={clsx(style.sliderImage)}>
                   <img src={product.thumbnail.url} alt={product.name} />
