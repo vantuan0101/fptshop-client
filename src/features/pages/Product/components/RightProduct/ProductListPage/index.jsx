@@ -4,13 +4,13 @@ import style from "./productlist.module.scss";
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../../../../utils/formatCurrency";
 const ProductListPage = ({ productList }) => {
-  // console.log(productList);
+  console.log(productList);
   return (
     <ul className={clsx(style.items)}>
       {productList?.map((product, index) => (
         <li key={product.name} className={clsx(style.item)}>
           <Link
-            to={`/${productList.typeProduct}/${product.id}`}
+            to={`/${product.typeProduct}/${product.id}`}
             className={clsx(style.item_contain)}
           >
             <div className={clsx(style.item_image)}>

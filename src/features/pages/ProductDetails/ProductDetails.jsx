@@ -12,7 +12,7 @@ const ProductDetails = ({ nameProduct, pathName }) => {
   let { id } = useParams();
   const [product, setProduct] = useState([]);
   const dispatch = useDispatch();
-  let navigate  = useNavigate();
+  let navigate = useNavigate();
   useEffect(() => {
     const fetcData = async () => {
       const res = await productApi.getProductById(pathName, id);
@@ -31,13 +31,20 @@ const ProductDetails = ({ nameProduct, pathName }) => {
         <div className={clsx(style.link)}>
           <NavLink to="/">Trang chủ /</NavLink>
           <NavLink to={`/${pathName}`}>{nameProduct} /</NavLink>
-          <NavLink to={`/${pathName}/${id}`} className={({isActive}) => isActive ? clsx(style.active) : undefined }>{product.brand}</NavLink>
+          <NavLink
+            to={`/${pathName}/${id}`}
+            className={({ isActive }) =>
+              isActive ? clsx(style.active) : undefined
+            }
+          >
+            {product.brand}
+          </NavLink>
         </div>
         <div className={clsx(style.contain)}>
           <div className={clsx(style.name)}>{product.name}</div>
           <div className={clsx(style.products)}>
             <div className={clsx(style.image)}>
-              <SliderField>
+              <SliderField slidesToShow={1}>
                 {product?.image?.url?.map((item, index) => (
                   <div key={item} className={clsx(style.image_item)}>
                     <img
@@ -51,7 +58,10 @@ const ProductDetails = ({ nameProduct, pathName }) => {
             </div>
             <div className={clsx(style.dsc)}>
               <div className={clsx(style.cost)}>
-                <div> {formatCurrency(product.price -  product.discountValue)}</div>
+                <div>
+                  {" "}
+                  {formatCurrency(product.price - product.discountValue)}
+                </div>
                 <div> {formatCurrency(product.price)}</div>
               </div>
               <div className={clsx(style.discount)}>
