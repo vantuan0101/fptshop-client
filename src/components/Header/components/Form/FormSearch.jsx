@@ -30,9 +30,12 @@ const FormSearch = () => {
   useEffect(() => {
     const result = async () => {
       const res = await productApi.getSearch({ q: value });
-      // setSearchResult(res.data);
+      // console.log(res.data);
+
       if (res.data && res.data?.length > 0) {
         setShowResult({ status: true, isValued: res.data });
+      } else if (res.data?.length <= 0) {
+        setShowResult({ status: true, isValued: [] });
       }
     };
     result();
@@ -78,19 +81,19 @@ const FormSearch = () => {
       <div
         className={clsx(
           style.fResult,
-          showResult.status &&
-            showResult.isValued &&
-            showResult.isValued?.length > 0
-            ? style.isActive
-            : null
+          showResult.status && showResult.isValued ? style.isActive : null
         )}
       >
         <div className={clsx(style.fContain)}>
-          {showResult.isValued?.map((item, index) => (
-            <div key={item.name}>
-              <a href={`/${item.typeProduct}/${item.id}`}>{item.name}</a>
-            </div>
-          ))}
+          {showResult.isValued?.length > 0 ? (
+            showResult.isValued?.map((item, index) => (
+              <div key={item.name}>
+                <a href={`/${item.typeProduct}/${item.id}`}>{item.name}</a>
+              </div>
+            ))
+          ) : (
+            <p>Không tìm thấy sản phẩm phù hợp 🤥</p>
+          )}
         </div>
       </div>
     </div>

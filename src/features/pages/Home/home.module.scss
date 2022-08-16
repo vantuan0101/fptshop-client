@@ -3,6 +3,7 @@
 .home {
   background-image: url("./../../../assets/image/desk-header-bg.webp");
   background-repeat: no-repeat;
+  overflow-x: hidden;
   @include mobile {
     background-color: $bg-op-white;
     background-image: none;

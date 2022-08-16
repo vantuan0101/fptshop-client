@@ -19,7 +19,7 @@ const RightProduct = ({ nameProduct, pathName, productList, handleSort }) => {
       </div>
       <div className={clsx(style.product_list)}>
         <SortProducts handleSort={handleSort} />
-        <ProductListPage pathName={pathName} productList={productList} />
+        <ProductListPage productList={productList} />
       </div>
     </div>
   );

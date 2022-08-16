@@ -3,14 +3,14 @@ import clsx from "clsx";
 import style from "./productlist.module.scss";
 import { Link } from "react-router-dom";
 import { formatCurrency } from "../../../../../../utils/formatCurrency";
-const ProductListPage = ({ productList ,pathName }) => {
+const ProductListPage = ({ productList }) => {
   // console.log(productList);
   return (
     <ul className={clsx(style.items)}>
       {productList?.map((product, index) => (
-        <li key={product.id} className={clsx(style.item)}>
+        <li key={product.name} className={clsx(style.item)}>
           <Link
-            to={`/${pathName}/${product.id}`}
+            to={`/${productList.typeProduct}/${product.id}`}
             className={clsx(style.item_contain)}
           >
             <div className={clsx(style.item_image)}>
@@ -21,7 +21,7 @@ const ProductListPage = ({ productList ,pathName }) => {
               <div className={clsx(style.item_options)}>
                 {product.options?.map((option, index) => (
                   <div
-                    key={index}
+                    key={option}
                     style={{
                       width: `calc(100% / ${product.options?.length})`,
                     }}
@@ -34,7 +34,7 @@ const ProductListPage = ({ productList ,pathName }) => {
 
             <div className={clsx(style.item_price)}>
               <div>
-              {formatCurrency(product.price -  product.discountValue)}
+                {formatCurrency(product.price - product.discountValue)}
                 <div
                   className={clsx(style.progress_bar)}
                   style={{ width: "70%" }}

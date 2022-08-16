@@ -132,13 +132,13 @@ const publicRoutes = [
           },
         ]
       },
-      
+      {
+        path: "/tim-kiem",
+        element: <SearchPage />,
+      },
     ],
   },
-  {
-    path: "/tim-kiem",
-    element: <SearchPage />,
-  },
+  
   {
     path: "/login",
     element: (

@@ -73,7 +73,6 @@ const ProductPages = ({ nameProduct, pathName }) => {
         <LeftProducts pathName={pathName} handleLeftFilter={handleLeftFilter} />
         <RightProduct
           nameProduct={nameProduct}
-          pathName={pathName}
           productList={productList}
           handleSort={handleSort}
         />
