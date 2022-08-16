@@ -1,69 +1,69 @@
-@import './../../../../../../assets/scss/import';
+@import "./../../../../../../assets/scss/import";
 
 .product_sort {
-    padding: 20px 15px 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 25px;
-  }
-  .sort_left {
-    display: flex;
-  
-    align-items: center;
-  
-    & > span {
-      font-size: 14px;
-      line-height: 14px;
-      color: #555;
-      margin-right: 20px;
-      display: none;
-      @include desktop {
-        display: block;
-      }
-    }
-  }
-  .btn_group {
-    display: flex;
-  //   background-color: wheat;
-    border-radius: 10px;
-    border : 1px solid #8392a5;
-    & > li {
-      &:first-child{
-          border-left: none;
-      }
-      padding: 10px;
-      // border: solid 1px #cb1c22;
-      // background-color: #cb1c22;
-      border-left: 1px solid #8392a5;
-      font-size: 14px;
-      @include md-tablet-desktop{
-        font-size: 17px;
-      }
-      & > a {
-          color: #8392a5;
-  
-      }
-    }
-  }
-  .sort_right {
+  padding: 20px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.sort_left {
+  display: flex;
+
+  align-items: center;
+
+  & > span {
+    font-size: 14px;
+    line-height: 14px;
+    color: #555;
+    margin-right: 20px;
     display: none;
-    @include tablet {
-      width: 70px;
-      height: 30px;
-      margin: auto 10px;
-    }
-    
-    @include md-tablet-desktop {
-      min-width: 118px;
+    @include desktop {
       display: block;
-      border: solid 1px #ced4da;
-      border-radius: 4px;
-      padding: 6px 25px 6px 8px;
-      font-size: 14px;
-      line-height: 16px;
-      background-color: #fff;
-      cursor: pointer;
-      white-space: nowrap;
     }
   }
+}
+.btn_group {
+  display: flex;
+  //   background-color: wheat;
+  border-radius: 10px;
+  border: 1px solid #8392a5;
+  & > li {
+    cursor: pointer;
+    &:first-child {
+      border-left: none;
+    }
+    padding: 10px;
+    // border: solid 1px #cb1c22;
+    // background-color: #cb1c22;
+    border-left: 1px solid #8392a5;
+    font-size: 14px;
+    @include md-tablet-desktop {
+      font-size: 17px;
+    }
+    & > a {
+      color: #8392a5;
+    }
+  }
+}
+.sort_right {
+  display: none;
+  @include tablet {
+    width: 70px;
+    height: 30px;
+    margin: auto 10px;
+  }
+
+  @include md-tablet-desktop {
+    min-width: 118px;
+    display: block;
+    border: solid 1px #ced4da;
+    border-radius: 4px;
+    padding: 6px 25px 6px 8px;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
