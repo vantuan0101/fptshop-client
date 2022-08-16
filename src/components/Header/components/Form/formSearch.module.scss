@@ -1,28 +1,10 @@
 @import "../../../../assets/scss/import";
-.fsResult {
-  width: 523px;
-  min-width: 100%;
-  padding: 10px 15px;
-  margin-top: -20px;
-  margin-left: -112px;
-}
-.fsrHeading {
-  font-size: 14px;
-  font-weight: bold;
-  color: $text-black;
-  margin-bottom: 10px;
-}
-.fsrProduct {
-  font-size: 14px;
-  color: $text-black;
-  margin-bottom: 10px;
-  display: block;
-}
 
 .fSearch {
   //   display: none;
   z-index: 5;
   padding: 10px 0;
+  position: relative;
   & > form {
     display: flex;
     position: relative;
@@ -81,4 +63,33 @@
       cursor: pointer;
     }
   }
+}
+.fResult{
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 49px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 100%;
+  z-index :14;
+  display: none;
+  opacity : 0;
+  visibility: hidden;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.fContain{
+  padding : 15px;
+  & > div {
+    padding : 10px 0;
+    & > a{
+      color : $text-black;
+    }
+  }
+}
+
+.isActive {
+  display: block;
+  opacity : 1;
+  visibility: visible;
 }
