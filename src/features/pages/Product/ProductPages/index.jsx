@@ -9,7 +9,6 @@ import RightProduct from "../components/RightProduct";
 import SilderProduct from "../components/SliderProduct/SilderProduct";
 import style from "./productpage.module.scss";
 const ProductPages = ({ nameProduct, pathName }) => {
-
   const [filters, setFilters] = useState({
     trang: null,
     limit: null,
@@ -52,10 +51,22 @@ const ProductPages = ({ nameProduct, pathName }) => {
   return (
     <div className={clsx(style.main)}>
       <div className={clsx(style.path)}>
-        <NavLink to="/" className={({ isActive }) =>
-              isActive ? clsx(style.active) : undefined}>Trang chủ / </NavLink>
-        <NavLink to={`/${pathName}`} className={({ isActive }) =>
-              isActive ? clsx(style.active) : undefined}>{nameProduct}</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? clsx(style.active) : undefined
+          }
+        >
+          Trang chủ /{" "}
+        </NavLink>
+        <NavLink
+          to={`/${pathName}`}
+          className={({ isActive }) =>
+            isActive ? clsx(style.active) : undefined
+          }
+        >
+          {nameProduct}
+        </NavLink>
       </div>
       <SilderProduct />
       <div className={clsx(style.container)}>

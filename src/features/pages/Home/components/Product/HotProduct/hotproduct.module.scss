@@ -42,13 +42,18 @@
   .item_top {
     & .image {
       margin-bottom: 16px;
+      transform: scale(1);
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
       @include mobile {
         height: 250px;
       }
       & > img {
         border-radius: 10px;
         @include mobile {
-          object-fit: fill;
+          object-fit: contain;
         }
       }
     }
@@ -58,6 +63,7 @@
       line-height: normal;
       color: #474c51;
       margin-bottom: 10px;
+      word-break: break-word;
     }
     & .cost {
       & div:first-child {
@@ -99,7 +105,6 @@
         text-decoration: line-through;
       }
     }
-    
   }
 }
 .item_bot {

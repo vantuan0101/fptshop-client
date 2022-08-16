@@ -25,9 +25,11 @@
   padding: 10px 0;
   & > form {
     display: flex;
-
     position: relative;
-    @include md-tablet-desktop {
+    @include tablet {
+      width: 400px;
+    }
+    @include desktop {
       width: 496px;
     }
     & > label {

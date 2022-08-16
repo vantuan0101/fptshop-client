@@ -3,6 +3,7 @@ import clsx from "clsx";
 import style from "./hotproduct.module.scss";
 import productApi from "../../../../../../api/productApi";
 import { Link } from "react-router-dom";
+import { formatCurrency } from "../../../../../../utils/formatCurrency";
 const HotProduct = ({nameHotProduct ,pathProduct}) => {
   const [listHotProduct, setListHotProduct] = useState([]);
   useEffect(() => {
@@ -25,13 +26,13 @@ const HotProduct = ({nameHotProduct ,pathProduct}) => {
                 </div>
                 <div className={clsx(style.name)}>{item.name}</div>
                 <div className={clsx(style.cost)}>
-                  <div>{item.price -  item.discountValue} ₫
+                  <div>{formatCurrency(item.price -  item.discountValue)}
                   <div
                   className={clsx(style.progress_bar)}
                   style={{ width: "70%" }}
                 ></div>
                   </div>
-                  <div>{item.price} ₫</div>
+                  <div>{formatCurrency(item.price)}</div>
                 </div>
               </div>
               <div className={clsx(style.item_bot)}>

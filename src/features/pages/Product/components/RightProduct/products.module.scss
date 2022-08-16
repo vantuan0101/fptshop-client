@@ -13,7 +13,6 @@
   .result_fil {
     margin-bottom: 30px;
     height: 132px;
-  
     & > h3 {
       height: 50%;
       padding: 15px;
@@ -24,6 +23,11 @@
     }
     & > div {
       height: 50%;
+      & > ul {
+        display: flex;
+        justify-content: space-around;
+        color: #595459;
+      }
     }
   }
   // list product

@@ -25,6 +25,9 @@
       @include md-tablet-desktop {
         color: $text-white;
       }
+      @include tablet {
+        margin-right: 20px;
+      }
 
       &::after {
         content: "";

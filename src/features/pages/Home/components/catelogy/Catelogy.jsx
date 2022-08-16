@@ -11,10 +11,12 @@ const Catelogy = () => {
       <ul className={clsx(style.catelogy)}>
         {catelogyListRender?.map((item) => (
           <li key={item.id} className={clsx(style.catelogy_item)}>
-            <div>
-              <img src={item.imageIcon} alt={item.name} />
-            </div>
-            <div>{item.name}</div>
+            <a href={`/${item.path}`}>
+              <div>
+                <img src={item.imageIcon} alt={item.name} />
+              </div>
+              <div>{item.name}</div>
+            </a>
           </li>
         ))}
       </ul>

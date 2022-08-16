@@ -1,17 +1,16 @@
 @import "./../../../../assets/scss/import";
 
 .main {
-  padding-top: 20px;
   background-color: $bg-op-white;
   margin-bottom: 50px;
-
-  @include md-tablet-desktop{
+  padding: 20px 15px;
+  @include md-tablet-desktop {
     margin-bottom: 20px;
-
+    padding: 20px 25px;
   }
 }
 
-.path{
+.path {
   width: 100%;
   max-width: 1200px;
   margin: 10px auto;
@@ -28,12 +27,11 @@
   max-width: 1200px;
   margin: 0 auto;
   // padding: 0 20px;
-  @include md-tablet-desktop{
+  @include md-tablet-desktop {
     display: flex;
-
   }
 }
 .active {
-  color: #cd1818!important;
+  color: #cd1818 !important;
   text-decoration: underline;
 }

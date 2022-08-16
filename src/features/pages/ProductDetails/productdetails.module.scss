@@ -8,6 +8,10 @@
 
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
+  @include md-tablet-desktop{
+    padding: 0 25px;
+  }
 }
 .link {
   margin-top: 10px;
@@ -131,6 +135,7 @@
 .buy {
   margin-top: 40px;
   & > button {
+    cursor: pointer;
     color: #fff;
     background: #cb1c22;
     outline: 0;

@@ -7,6 +7,7 @@ import SliderField from "../../../components/Slider/Slider";
 import { FcOk } from "react-icons/fc";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../../app/cartSlice";
+import { formatCurrency } from "../../../utils/formatCurrency";
 const ProductDetails = ({ nameProduct, pathName }) => {
   let { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -50,8 +51,8 @@ const ProductDetails = ({ nameProduct, pathName }) => {
             </div>
             <div className={clsx(style.dsc)}>
               <div className={clsx(style.cost)}>
-                <div>{product?.price - product?.discountValue} ₫</div>
-                <div>{product?.price} ₫</div>
+                <div> {formatCurrency(product.price -  product.discountValue)}</div>
+                <div> {formatCurrency(product.price)}</div>
               </div>
               <div className={clsx(style.discount)}>
                 <div className={clsx(style.discount_check)}>

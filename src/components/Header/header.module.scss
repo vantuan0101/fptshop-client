@@ -28,6 +28,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  @include tablet {
+    height: 74px;
+  }
+  @include desktop {
     height: 56px;
   }
 }
@@ -52,13 +57,21 @@
     // height: 40px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     position: relative;
-    height: 36px;
+
     background: $bg-black;
     width: 100%;
     left: 0 !important;
     overflow-y: unset;
+  }
+  @include tablet {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 58px;
+  }
+  @include desktop {
+    justify-content: space-between;
+    height: 36px;
   }
 }
 
@@ -122,7 +135,7 @@
     display: flex;
     align-items: center;
     padding: $pd-mobile;
-    
+
     & > i {
       background-position: -25px -72px;
       display: inline-block;
